@@ -272,7 +272,6 @@ Social List  Style
 .social-list li {
   display: inline-block;
   margin-bottom: 0;
-  padding: 0 3px;
 }
 
 .social-list li a {
@@ -586,7 +585,7 @@ Navbar Style CSS
 
 .other-option ul li {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 0px;
 }
 
 .other-option ul li:last-child {
@@ -600,7 +599,7 @@ Navbar Style CSS
 }
 
 .other-option ul li a i {
-  margin-right: 5px;
+  margin-right: 1px;
 }
 
 .other-option ul li a:hover {
