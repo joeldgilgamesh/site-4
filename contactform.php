@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype php>
 <html lang="En">
 <!--
 =========================================================
@@ -58,7 +58,7 @@ Coded by www.blumdesk.com
         </div>
         <!-- End Preloader Area -->
 
-       <!-- Start Navbar Area -->
+          <!-- Start Navbar Area -->
 		<div class="navbar-area fixed-top">
 			<!-- Menu For Mobile Device -->
 			<div class="mobile-nav mb-sm-5">
@@ -81,7 +81,7 @@ Coded by www.blumdesk.com
 									<a href="index.html" class="nav-link">Home</a>
 								</li>
 								<li class="nav-item">
-									<a href="#" class="nav-link dropdown-toggle">Ours products</a>
+									<a href="#" class="nav-link dropdown-toggle ">Ours products</a>
 									<ul class="dropdown-menu">
 										<li class="nav-item">
 											<a href="wines.html" class="nav-link">Wines</a>
@@ -106,10 +106,10 @@ Coded by www.blumdesk.com
 									</ul>
 								</li>
 								<li class="nav-item">
-									<a href="about.html" class="nav-link active">About Us</a>
+									<a href="about.html" class="nav-link">About Us</a>
 								</li>
 								<li class="nav-item">
-									<a href="contact.html" class="nav-link">Contact</a>
+									<a href="contact.html" class="nav-link active">Contact</a>
 								</li>
 							</ul>
 
@@ -226,11 +226,12 @@ Coded by www.blumdesk.com
 		</div>
 		<!-- End Sidebar Modal -->
 
+
 		<!-- Start Page Title Area -->
-		<div class="page-title-area item-bg-2">
+		<div class="page-title-area item-bg-6">
 			<div class="container">
 				<div class="page-title-content">
-					<h2>About Us</h2>
+					<h2>Contact Us</h2>
 					<ul>
 						<li>
 							<a href="index.html">
@@ -238,118 +239,150 @@ Coded by www.blumdesk.com
 								<i class="fa fa-chevron-right"></i>
 							</a>
 						</li>
-						<li>About Us</li>
+						<li>Contact</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<!-- End Page Title Area -->
 		
-		<!-- Start Our Story Area -->
-		<section class="our-story-area ptb-100">
+		<!-- Start Contact Area -->
+		<section class="contact-area ptb-100">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-12" style="text-align:center">
-						<div class="about-text">
-							<span></span>
-							<h2>WHO WE ARE</h2>
-							<p> African Distribution Networks was founded in 2002 with the mission of distributing alcoholic beverages, mainly wines and liqueurs, into CEMAC (Central African Economic and Monetary Community) countries: Cameroon, Gabon, the Central African Republic, Chad, the Republic of the Congo, Equatorial Guinea</p>
-							<br>
-							<p><b><u>Our director</u></b></p>
-							<h2> Pascal Monkam, managing director</h2>
-							<p>Pascal Monkam founded ADN in 2004. He holds a Bachelor of Science (Food Science) from Delaware University (USA), an Honours in politics from UNISA (South Africa), an MBA from WITS Business School (South Africa) and a PhD in Development Studies from University of Pretoria (South Africa).
-								</p>
-								<br>
-								
+				<div class="row">
+					<div class="col-12">
+						<div class="section-title">
+							<h2>Write Us</h2>
+							<p>We will be happy to answer you</p>
 						</div>
 					</div>
-					<div class="col-lg-8">
-						<div class="about-text">
-							<span></span>
-							<h2>Our Sales and Marketing Team</h2>
-							<p>The sales and marketing team is constituted by a dozen of experience, aggressive men and women working from Cameroon. 
-								Three marketers (established in Libreville and Brazzaville) ensure the distribution of our products in neighboring countries, mainly Gabon, Equatorial Guinea, and Congo-Brazzaville).
-								</p>								
+				</div>
+				<form id="contactForm" action="contactform.php" method="post">
+					<div class="row">
+						<div class="col-lg-6 col-sm-6">
+							<div class="form-group">
+								<label>Your Name</label>
+								<input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-sm-6">
+							<div class="form-group">
+								<label>Your Email</label>
+								<input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-sm-6">
+							<div class="form-group">
+								<label>Your Phone</label>
+								<input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-sm-6">
+							<div class="form-group">
+								<label>Subject</label>
+								<input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="col-12">
+							<div class="form-group">
+								<label>Your Message</label>
+								<textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message"></textarea>
+								<div class="help-block with-errors"></div>
+							</div>
+						</div>
+
+						<div class="col-lg-12 col-md-12">
+							<button type="submit" class="default-btn">
+								<span>Send Message</span>
+							</button>
+							<div id="msgSubmit" class="h3 text-center hidden"></div>
+							<div class="clearfix"></div>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="about-img">
-							<img src="assets/img/about/meeting team.jpg" alt="About">
+				</form>
+				<?php
+                                    $to = 'contact@blumdesk.com';
+                                    $subject = 'Email Site African Network Distribution';
+                                    $headers = "MIME-Version: 1.0"."\r\n";
+                                    $headers.='Content-type: text/html; charset: UTF-8'."\r\n";
+                                    $headers.= "Messsage_de: ".$_POST['prename']."\r\n";
+                                    $message= "\n<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\"></head><body>Nom: ".$_POST['name']."<br><br>\r\n\r\n";
+                                    $message.= "Pr&eacute;nom: ".$_POST['prename']."<br><br>\r\n\r\n";
+                                    $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+                                    if(isset($email) && $email && isset($_POST['prename'])){
+                                        $headers.= "Repondez_&agrave;: $email";
+                                        $message.= "Email: ".$_POST['email']."<br><br>\r\n\r\n";
+                                        $message.= "T&eacute;l&eacute;phone: ".$_POST['phone_number']."<br><br>\r\n\r\n";
+                                        $message.= "Subject: ".$_POST['msg_subject']."<br><br>\r\n\r\n";
+                                        $message.= "Message: ".$_POST['message']."<br><br></body></html>";
+                                        $sent = mail($to,$subject,$message,$headers,'-f'.$to);
+                                    }else{
+                                        echo "<script> alert(\"The email address is incorrect. Please correct the address before sending the message.\"); </script>";
+                                    }
+				    				if(isset($sent) && $sent && isset($_POST['name'])){
+										echo "<script>alert(\"Your message is being sent. Thank you for your cooperation.\");</script>";
+				    				}else{
+										echo "<script>alert(\"Error: Message not sent. Please try again.\");</script>";
+				    				}
+               					?>
+			</div>
+		</section>
+		<!-- End Contact Area -->
+
+		<!-- Start Contact Info Area -->
+		<section class="contact-info-area pb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-title">
+							<h2>Contact</h2>
+							<p>Whatever your needs, we're looking forward to hearing from you.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="contacts-info">
+							<div class="row align-items-center">
+								<div class="col-lg-12">
+									<ul class="contacts-text">
+										<li>
+											<i class="fa fa-phone"></i>
+											<span>Phone</span>
+											<a href="tel:+237 6 57 28 03 37">+237 6 57 28 03 37 / +237 6 73 94 22 13</a>
+										</li>
+										<li>
+											<i class="fa fa-envelope"></i>
+											<span>Email</span>
+											<span>Info@africandistributionnetworks.com</span>
+										</li>
+										<li>
+											<i class="fa fa-map-marker"></i>
+											<span>Address</span>
+											<a href="contact.html">AKWA, DOUALA</a>	
+										</li>
+									</ul>
+								</div>
+								<!-- <div class="col-lg-6">
+									<div class="contact-map">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.1583091352!2d-74.11976373946234!3d40.69766374859258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1571633944171!5m2!1sen!2sbd"></iframe>
+									</div>
+								</div> -->
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		
-		
-		<section class="our-histry-area pb-100">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-12"style="text-align:center">
-						<div class="about-text">
-							<h2 class="text-align-center">WHAT WE DO AND HOW WE DO IT</h2>
-							<p>ADN has established itself as the major distributor of fine wine brands and spirits in Cameroon and in Central Africa.
-								Our hero brands are carefully selected as to offer the market a complete range to match different customers’ needs. In doing so, achieving the best VALUE FOR MONEY for the consumers remains our main goal.
-								To form part of our collection, each wine or spirit must have its distinct characteristics, history and personality. Then, the role of our dedicated team is a continuous quest to market, grow and nurture the brands so they can flourish.
-								</p>
-						</div>						
-					</div>
-					<br><br>
-				
-				</div>
-			</div>
-		</section>
-
-		<section class="our-histry-area pb-100">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-12" style="text-align:center">
-						<div class="about-text">
-							<h2 class="text-align-center">Our Vision</h2>
-							<p> ADN leverages on its KNOWLEDGE of the market, to deliver on TIME the right product to its customers at a FAIR price as this is the condition for a long-term RELATIONSHIP which ADN values and nurtures to support its internal growth.</p>
-				
-						</div>						
-					</div>
-					<br><br>
-				
-				</div>
-			</div>
-		</section>
-		<!-- End Our Story Area -->
-
-		<!-- End Services Area -->
-		
-		
-		
-		
-		<!-- Start Partner Logo area -->
-        <!-- <div class="partner-area ptb-100">
-			<div class="section-title">
-				<span>Patners</span>
-				<h2>Our partners</h2>
-			</div>
-			<div class="container">
-				<div class="partner-weap owl-carousel owl-theme">
-					<div class="single-logo">
-						<img src="assets/img/home-one/partner-logo/Anthonij_Rupert.png" alt="Logo">
-					</div>
-					<div class="single-logo">
-						<img src="assets/img/home-one/partner-logo/bellingham.png" alt="Logo">
-					</div>
-					<div class="single-logo">
-						<img src="assets/img/home-one/partner-logo/graham-beck.png" alt="Logo">
-					</div>
-					<div class="single-logo">
-						<img src="assets/img/home-one/partner-logo/Boschendal.png" alt="Logo">
-					</div>
-					<div class="single-logo">
-						<img src="assets/img/home-one/partner-logo/guardian peak.png" alt="Logo">
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- Start End Partner Logo area -->
-
+		<!-- End Contact Info Area -->
 <!-- Start Footer Top Area -->
 <footer class="footer-top-area pt-100">
 	<div class="container">
