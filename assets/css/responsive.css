@@ -2515,6 +2515,25 @@
   }
 }
 
+.header-area .top-header-area {
+  background-color: #25245e;
+  text-align: center;
+}
+.header-area .top-header-area .header-content-left li {
+  padding-right: 0;
+  margin-bottom: 5px;
+}
+.header-area .top-header-area .header-content-right {
+  float: unset;
+  margin-top: 5px;
+}
+.header-area .top-header-area .header-content-right li a {
+  padding: 0 5px;
+}
+.header-area .top-header-area .header-content-right li:last-child a {
+  padding-right: 10px;
+}
+
 /* Max width 1700px */
 @media only screen and (min-width: 1700px) {
   .banner-area.banner-area-two {

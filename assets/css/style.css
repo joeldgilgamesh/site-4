@@ -497,9 +497,15 @@ Navbar Style CSS
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #444163;
+  background-color: #ffffff;
   opacity: 0.9;
   z-index: -1;
+}
+
+.main-nav .navbar .top-header {
+  border-bottom: 1px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px 0;
 }
 
 .main-nav .navbar.is-sticky {
@@ -6259,3 +6265,71 @@ Checkout Area Style
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
+
+/*
+Header Area Style
+======================================================*/
+.header-area .container-fluid {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.header-area .top-header-area {
+  border-bottom: 1px solid #462715;
+  background-color: #fff;
+  padding: 3px 0;
+}
+
+.header-area .top-header-area .header-content-left li {
+  display: inline-block;
+  padding-right: 20px;
+  color: #462715;
+  font-size: 14px;
+}
+
+.header-area .top-header-area .header-content-left li:last-child {
+  padding-right: auto;
+}
+
+.header-area .top-header-area .header-content-left li img {
+  color: #462715;
+  margin-right: auto;
+  margin-left: 50px;
+  font-size: 15px;
+  position: relative;
+  top: 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header-area .top-header-area .header-content-right {
+  float: right;
+  line-height: 1;
+}
+
+.header-area .top-header-area .header-content-right li {
+  display: inline-block;
+}
+
+.header-area .top-header-area .header-content-right li a {
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+.header-area .top-header-area .header-content-right li a i {
+  font-size: 16px;
+}
+
+.header-area .top-header-area .header-content-right li:last-child a {
+  padding-right: 0;
+}
+
+.header-area .top-header-area .header-content-right li:hover a {
+  color: #d80650;
+}
+
+.header-area .top-header-area .header-content-right li:hover a i {
+  color: #d80650;
+}
+
+
