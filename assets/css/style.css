@@ -3381,6 +3381,8 @@ Start Main Slider Area Style
 ===================================================*/
 .slider-area {
   position: relative;
+  padding-top: 100px;
+
 }
 
 .slider-area .main-slider-item {
@@ -3396,13 +3398,13 @@ Start Main Slider Area Style
 .slider-area .main-slider-item .slider-text {
   position: relative;
   z-index: 1;
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
   margin-top: -80px;
 }
 
 .slider-area .main-slider-item .slider-text span {
-  color: #ffffff;
+  color: #000000;
   font-size: 17px;
   display: inline-block;
   margin-bottom: 10px;
@@ -3410,18 +3412,20 @@ Start Main Slider Area Style
 
 .slider-area .main-slider-item .slider-text h1 {
   font-size: 70px;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 20px;
 }
 
 .slider-area .main-slider-item .slider-text p {
   font-size: 17px;
-  color: #d7d6d6;
+  color: #000000;
+  max-width: 700px;
+  background-color: #4d372c;
   margin-bottom: 35px;
 }
 
 .slider-area .main-slider-item .slider-text .default-btn {
-  background-color: #ffffff;
+  background-color: #000000;
   padding: 15px 40px;
   color: #4d372c;
   font-weight: 500;
@@ -3456,7 +3460,7 @@ Start Main Slider Area Style
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: #3f3e3e !important;
+  background-color: #000000 !important;
   border-radius: 50%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -6277,29 +6281,30 @@ Header Area Style
 .header-area .top-header-area {
   border-bottom: 1px solid #462715;
   background-color: #fff;
-  padding: 3px 0;
+  padding: 0px 0;
 }
 
 .header-area .top-header-area .header-content-left li {
   display: inline-block;
-  padding-right: 20px;
+  position: relative;
   color: #462715;
-  font-size: 14px;
 }
 
-.header-area .top-header-area .header-content-left li:last-child {
-  padding-right: auto;
-}
 
 .header-area .top-header-area .header-content-left li img {
   color: #462715;
-  margin-right: auto;
-  margin-left: 50px;
   font-size: 15px;
   position: relative;
   top: 2px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.header-area .top-header-area .header-content-left li h1 {
+  color: #462715;
+  position: relative;
+  top: 10px;
+ margin-bottom: 0px;
 }
 
 .header-area .top-header-area .header-content-right {
