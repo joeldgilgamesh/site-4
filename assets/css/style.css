@@ -1161,7 +1161,7 @@ Our Product Area Style
 }
 
 .single-product .product-details a {
-  font-size: 20px;
+  font-size: 15px;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   color: #4d372c;
@@ -2019,6 +2019,24 @@ Sidebar Menu Style
   border: none;
 }
 
+.sidebar-modal .modal-header .product img {
+  margin-left: 100px;
+  margin-top: 30px;
+  
+}
+
+.sidebar-modal .modal-header .sidebar-modal-widget  li span{
+    width: 30%;
+    color: #2e0404;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sidebar-modal .modal-header .sidebar-modal-widget  ul{
+  padding-left:10px
+}
+
+
 .sidebar-modal .modal-header .close {
   height: 30px;
   width: 30px;
@@ -2043,6 +2061,24 @@ Sidebar Menu Style
 .sidebar-modal .modal-header h2 {
   background-color: #f1f0f6;
   padding: 30px 25px;
+  font-size: 20px;
+}
+
+.sidebar-modal .modal-header .sidebar-modal-widget h3 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left:10px;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+
+.sidebar-modal .modal-header h5 {
+  background-color: #2e0404;
+  padding-left: 55px;
+  margin-left: 12px;
+  margin-top: 20px;
+  color:white;
 }
 
 .sidebar-modal button:focus {
