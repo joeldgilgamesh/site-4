@@ -137,21 +137,21 @@ Coded by www.blumdesk.com
 											<li class="contact-number">
 												<a href="tel:+237 6 57 28 03 37" class="call">
 													<i class="fa fa-phone"></i> 
-													  +237 6 57 28 03 37
+													  +237 6 57 28 03 37 / +237 6 73 94 22 13
 												</a>
 												<ul class="social-list" >
 													<li >
-														<a href="#">
+														<a href="https://twitter.com/pascal_mon56576" target="_blank">
 															<i class="fa fa-facebook"></i>
 														</a>
 													</li>
 													<li >
-														<a href="#">
+														<a href="https://twitter.com/pascal_mon56576" target="_blank">
 															<i class="fa fa-twitter"></i>
 														</a>
 													</li>
 													<li>
-														<a href="#">
+														<a href="https://twitter.com/pascal_mon56576" target="_blank">
 															<i class="fa fa-instagram"></i>
 														</a>
 													</li>
@@ -222,22 +222,22 @@ Coded by www.blumdesk.com
 								<h3 class="title">Connect With Us</h3>
 								<ul class="social-list">
 									<li>
-										<a href="#">
+										<a href="https://twitter.com/pascal_mon56576" target="_blank">
 											<i class="fa fa-facebook"></i>
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="https://twitter.com/pascal_mon56576" target="_blank">
 											<i class="fa fa-twitter"></i>
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="https://twitter.com/pascal_mon56576" target="_blank">
 											<i class="fa fa-instagram"></i>
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="https://twitter.com/pascal_mon56576" target="_blank">
 											<i class="fa fa-linkedin"></i>
 										</a>
 									</li>
@@ -409,78 +409,83 @@ Coded by www.blumdesk.com
 		<!-- End Contact Info Area -->
 <!-- Start Footer Top Area -->
 <footer class="footer-top-area pt-100">
-	<div class="container">
-		<div class="row footer-wrapper">
-			<div class="col-lg-4 col-sm-6 col-md-6">
-				<div class="single-widget">
-					<a class="brand" href="#">
-						<img src="assets/img/png/logo 1.png" alt="footer-logo">
-					</a> 
-					<p>Please contact us so that we can place your offer on the African quality 
-					   beverage distribution network and activate our customized management and supply services.</p> 
+			<div class="container">
+				<div class="row footer-wrapper">
+					<div class="col-lg-4 col-sm-6 col-md-6">
+						<div class="single-widget">
+							<a class="brand" href="#">
+								<img src="assets/img/png/logo 1.png" alt="footer-logo">
+							</a> 
+							<p>A company dedicated to the distribution of fine wines and spirits throughout Afric</p> 
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 col-md-6">
+						<div class="single-widget single-widgetss">
+							<h3>Quick Link</h3>
+							<ul>
+								<li>
+									<a href="index.html">Home</a>
+								</li>
+								<li>
+									<a href="wines.html">Wines</a>
+								</li>
+								<li>
+									<a href="Whisky and Spirit.html">Whisky and Spirit</a>
+								</li>
+								<li>
+									<a href="Champagne and Sparkling.html">Champagne and Sparkling</a>
+								</li>
+								<li>
+									<a href="about.html">About Us</a>
+								</li>
+								<li>
+									<a href="contact.html">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 col-md-6">
+						<div class="single-widget">
+							<h3>Address</h3>
+							<ul>
+								<li class="address">
+									<i class="fa fa-map-marker"></i>
+									AKWA <br>
+								</li>
+								<li class="address">
+									<i class="fa fa-phone"></i>
+									<span>+237 6 57 28 03 37 / +237 6 73 94 22 13</Span>
+								</li>
+								<li class="address">
+									<i class="fa fa-envelope"></i>
+									<span class="__cf_email__">info@africandistributionnetworks.com</span>
+									<span class="__cf_email__">marketing@africandistributionnetwork.com</span>
+									<span class="__cf_email__">sales@africandistributionnetworks.com</span>
+								</li>
+							</ul>		
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 col-sm-6 col-md-6">
-				<div class="single-widget single-widgetss">
-					<h3>Quick Link</h3>
-					<ul>
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="wines.html">Brand</a>
-						</li>
-						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact</a>
-						</li>
-					</ul>
+			<div class="container footer-bottom">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div>
+							<p>
+								Copyright <i class="fa fa-copyright"></i>2023 ADN. Designed By 
+								<a href="https://blumdesk.com/" target="_blank">Blumdesk</a>
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<ul class="terms-conditions">
+							<li><a href="#">Terms & Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 col-sm-6 col-md-6">
-				<div class="single-widget">
-					<h3>Address</h3>
-					<ul>
-						<li class="address">
-							<i class="fa fa-map-marker"></i>
-							AKWA <br>
-						</li>
-						<li class="address">
-							<i class="fa fa-phone"></i>
-							<span>+237 6 57 28 03 37 / +237 6 73 94 22 13</Span>
-						</li>
-						<li class="address">
-							<i class="fa fa-envelope"></i>
-							<span class="__cf_email__">Info@africandistributionnetworks.com</span>
-							<span class="__cf_email__">marketing@africandistributionnetwork.com</span>
-							<span class="__cf_email__">sales@africandistributionnetworks.com</span>
-						</li>
-					</ul>		
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container footer-bottom">
-		<div class="row">
-			<div class="col-lg-6 col-md-6">
-				<div>
-					<p>
-						Copyright <i class="fa fa-copyright"></i>2023 ADN. Designed By 
-						<a href="https://blumdesk.com/" target="_blank">Blumdesk</a>
-					</p>
-				</div>
-			</div>
-			<div class="col-lg-6 col-md-6">
-				<ul class="terms-conditions">
-					<li><a href="#">Terms & Conditions</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</footer>
+		</footer>
 <!-- End Footer Top Area -->
 
 <!-- Start Go Top Area -->
