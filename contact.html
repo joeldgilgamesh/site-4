@@ -282,40 +282,33 @@ Coded by www.blumdesk.com
 					</div>
 				</div>
 				<form id="contactForm" action="contactform.php" method="post">
-					<div class="row">
+					<div class="row align-center">
 						<div class="col-lg-6 col-sm-6">
+
 							<div class="form-group">
 								<label>Your Name</label>
 								<input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name">
 								<div class="help-block with-errors"></div>
 							</div>
-						</div>
 
-						<div class="col-lg-6 col-sm-6">
 							<div class="form-group">
 								<label>Your Email</label>
 								<input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email">
 								<div class="help-block with-errors"></div>
 							</div>
-						</div>
 
-						<div class="col-lg-6 col-sm-6">
 							<div class="form-group">
 								<label>Your Phone</label>
-								<input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control">
+								<input type="text" name="phone" id="phone" required data-error="Please enter your number" class="form-control">
 								<div class="help-block with-errors"></div>
 							</div>
-						</div>
 
-						<div class="col-lg-6 col-sm-6">
 							<div class="form-group">
 								<label>Subject</label>
-								<input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+								<input type="text" name="subject" id="subject" class="form-control" required data-error="Please enter your subject">
 								<div class="help-block with-errors"></div>
 							</div>
-						</div>
 
-						<div class="col-12">
 							<div class="form-group">
 								<label>Your Message</label>
 								<textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message"></textarea>
@@ -335,6 +328,35 @@ Coded by www.blumdesk.com
 			</div>
 		</section>
 		<!-- End Contact Area -->
+
+		 <!-- Contact results -->
+		 <?php
+
+		 $to = 'contact@bergeronnette.cm';
+		 $subject = 'Email Site Web bergeonnette';
+		 $headers = "MIME-Version: 1.0"."\r\n";
+		 $headers.='Content-type: text/html; charset: UTF-8'."\r\n";
+		 $headers.= "Messsage_de: ".$_POST['name']."\r\n";
+		 $message= "\n<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\"></head><body>Nom: ".$_POST['name']."<br><br>\r\n\r\n";
+		 $message.= "Nom: ".$_POST['name']."<br><br>\r\n\r\n";
+		 $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+		 if(isset($email) && $email && isset($_POST['name'])){
+			$headers.= "Repondez_&agrave;: $email";
+			$message.= "Email: ".$_POST['email']."<br><br>\r\n\r\n";
+			$message.= "phone: ".$_POST['phone']."<br><br>\r\n\r\n";
+			$message.= "subject: ".$_POST['subject']."<br><br>\r\n\r\n";
+			$message.= "Message: ".$_POST['message']."<br><br></body></html>";
+			$sent = mail($to,$subject,$message,$headers,'-f'.$to);
+		 }else{
+			echo "<script> alert(\"L\'adresse e-mail est incorrecte. Veuillez corriger l\'adresse avant d\'envoyer le message.\"); </script>";
+		 }
+		 if(isset($sent) && $sent && isset($_POST['name'])){
+			echo "<script>alert(\"Votre message est en cours d\'envoi. Merci de votre coopération.\");</script>";
+		 }else{
+			echo "<script>alert(\"Erreur : Message non envoyé. Veuillez réessayer.\");</script>";
+		 }
+	   ?>
+
 
 		<!-- Start Contact Info Area -->
 		<section class="contact-info-area pb-100">
