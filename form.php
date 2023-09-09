@@ -2,7 +2,7 @@
 if(isset($_POST['submit'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "";
+    $email_to = "julienclarkatangana84@gmail.com";
 
     function died($error) {
         // your error code can go here
@@ -20,7 +20,7 @@ if(isset($_POST['submit'])) {
     if(!isset($_POST['name']) ||
         !isset($_POST['email']) ||
         !isset($_POST['phone']) ||
-        !isset($_POST['sujet']) ||
+        !isset($_POST['subject']) ||
         !isset($_POST['message'])) {
         died(
             'Nous sommes désolés, mais le formulaire que vous avez soumis semble poser' .
@@ -32,7 +32,7 @@ if(isset($_POST['submit'])) {
     $nom = $_POST['name']; // required
     $email = $_POST['email']; // required
     $telephone = $_POST['phone']; // not required
-    $sujet = $_POST['sujet']; // not required
+    $subject = $_POST['subject']; // not required
     $message = $_POST['message']; // required
 
     $error_message = "";
@@ -62,16 +62,16 @@ if(isset($_POST['submit'])) {
 
     $email_message = "Détail.\n\n";
     $email_message .= "Nom: ".$nom."\n";
-    $email_message .= "Prénom: ".$prenom."\n";
     $email_message .= "Email: ".$email."\n";
-    $email_message .= "Subjet: ".$sujet."\n";
+    $email_message .= "phone: ".$telephone."\n";
+    $email_message .= "Pays: ".$subject."\n";
     $email_message .= "Commentaire: ".$message."\n";
 
     // create email headers
     $headers = 'From: '.$email."\r\n".
         'Reply-To: '.$email."\r\n" .
         'X-Mailer: PHP/' . phpversion();
-    mail($email_to, $email_subject, $email_message, $headers);
+    mail($email_to, $subject, $email_message, $headers,'-f'.$email_to);
 
     echo "Merci de nous avoir contacter. Nous vous contacterons très bientôt.";
 
