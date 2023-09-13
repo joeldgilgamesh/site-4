@@ -321,6 +321,30 @@ Coded by www.blumdesk.com
 						</div>
 					</div>
 				</form>
+                <?php
+                                    $to = 'joelmbompieze@blumdesk.com';
+                                    $subject = 'Email Site Web African Network Distribution';
+                                    $headers = "MIME-Version: 1.0"."\r\n";
+                                    $headers.='Content-type: text/html; charset: UTF-8'."\r\n";
+                                    $headers.= "Messsage_of: ".$_POST['name']."\r\n";
+                                    $message= "\n<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\"></head><body>Nom: ".$_POST['name']."<br><br>\r\n\r\n";
+                                    $email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+                                    if(isset($email) && $email && isset($_POST['name'])){
+                                        $headers.= "Repondez_&agrave;: $email";
+                                        $message.= "Email: ".$_POST['email']."<br><br>\r\n\r\n";
+                                        $message.= "Phone: ".$_POST['phone']."<br><br>\r\n\r\n";
+                                        $message.= "Subject: ".$_POST['subject']."<br><br>\r\n\r\n";
+                                        $message.= "Message: ".$_POST['message']."<br><br></body></html>";
+                                        $sent = mail($to,$subject,$message,$headers,'-f'.$to);
+                                    }else{
+                                        echo "<script> alert(\"The e-mail address is incorrect. Please correct the address before sending the message.\"); </script>";
+                                    }
+				    				if(isset($sent) && $sent && isset($_POST['name'])){
+										echo "<script>alert(\"Your message is being sent. Thank you for your visit\");</script>";
+				    				}else{
+										echo "<script>alert(\"Error: Message not sent. Please try again.\");</script>";
+				    				}
+               					?>
 			</div>
 		</section>
 
