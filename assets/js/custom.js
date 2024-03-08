@@ -343,5 +343,11 @@
 	});
 })(jQuery);
 
+//mise ajout automatique de la date sur le footer
+function get_year() {
+    var currentDate = new Date();
+    var currentYear = currentDate.getFullYear();
+    return currentYear;
+}
 
-  
+$(".année").html(get_year)
