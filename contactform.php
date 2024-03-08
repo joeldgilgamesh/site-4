@@ -1,65 +1,65 @@
-<!doctype html>
-<html lang="En">
-<!--
-=========================================================
-* Template - v4.0.0
-=========================================================
+	<!doctype html>
+	<html lang="En">
+	<!--
+	=========================================================
+	* Template - v4.0.0
+	=========================================================
 
-* Product Page: https://www.blumdesk.com
-* Copyright 2020 Blumdesk Sarl (https://www.blumdesk.com)
+	* Product Page: https://www.blumdesk.com
+	* Copyright 2020 Blumdesk Sarl (https://www.blumdesk.com)
 
-Coded by www.blumdesk.com
+	Coded by www.blumdesk.com
 
- =========================================================
+	=========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
-<head>
-        <!-- Required meta tags --> 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
-        <!-- Bootstrap Min CSS --> 
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!-- Owl Theme Default Min CSS --> 
-        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-        <!-- Owl Carousel Min CSS --> 
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <!-- Animate Min CSS --> 
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <!-- Flaticon CSS --> 
+	* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+	-->
+	<head>
+		<!-- Required meta tags --> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap Min CSS --> 
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<!-- Owl Theme Default Min CSS --> 
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+		<!-- Owl Carousel Min CSS --> 
+		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<!-- Animate Min CSS --> 
+		<link rel="stylesheet" href="assets/css/animate.min.css">
+		<!-- Flaticon CSS --> 
 		<link rel="stylesheet" href="assets/css/flaticon.css">
-        <!-- Font Awesome Min CSS --> 
+		<!-- Font Awesome Min CSS --> 
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<!-- Nice Select Min CSS --> 
 		<link rel="stylesheet" href="assets/css/nice-select.min.css">
-        <!-- Magnific Popup Min CSS --> 
+		<!-- Magnific Popup Min CSS --> 
 		<link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-        <!-- Meanmenu Min CSS -->
-        <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-        <!-- Style CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-        <!-- Responsive CSS -->
+		<!-- Meanmenu Min CSS -->
+		<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+		<!-- Style CSS -->
+		<link rel="stylesheet" href="assets/css/style.css">
+		<!-- Responsive CSS -->
 		<link rel="stylesheet" href="assets/css/responsive.css">
 		
 		<!-- Favicon -->
-        <link rel="icon" type="image/png" href="assets/img/png/logo 1.png">
-        <!-- Title -->
-        <title>ADN - african distribution network </title>
-    </head>
+		<link rel="icon" type="image/png" href="assets/img/png/logo 1.png">
+		<!-- Title -->
+		<title>ADN - african distribution network </title>
+	</head>
 
-    <body>
+	<body>
 		<!-- Start Preloader Area -->
 		<div class="preloader">
-            <div class="spinner">
-                <div class="double-bounce1"></div>
-                <div class="double-bounce2"></div>
-            </div>
-        </div>
-        <!-- End Preloader Area -->
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		</div>
+		<!-- End Preloader Area -->
 
-          <!-- Start Navbar Area -->
-		  <header class="header-area fixed-top">
+			<!-- Start Navbar Area -->
+			<header class="header-area fixed-top">
 			<div class="top-header-area">
 				<div class="container-fluid">
 					<div class="row align-items-center">
@@ -137,7 +137,7 @@ Coded by www.blumdesk.com
 											<li class="contact-number">
 												<a href="tel:+237 6 57 28 03 37" class="call">
 													<i class="fa fa-phone"></i> 
-													  +237 6 57 28 03 37 / +237 6 73 94 22 13
+														+237 6 57 28 03 37 / +237 6 73 94 22 13
 												</a>
 												<ul class="social-list" >
 													<li >
@@ -281,7 +281,7 @@ Coded by www.blumdesk.com
 						</div>
 					</div>
 				</div>
-				<form action="contactform.php" method="post">
+				<form action="contactf.php" method="post">
 					<div class="row ">
 						<div class="col-lg-6 col-sm-6">
 
@@ -321,10 +321,35 @@ Coded by www.blumdesk.com
 						</div>
 					</div>
 				</form>
+				<?php
+									$to = 'joelmbompieze@gmail.com';
+									$subject = 'Email From web Site ADN';
+									$headers = "MIME-Version: 1.0"."\r\n";
+									$headers.='Content-type: text/html; charset: UTF-8'."\r\n";
+									$headers.= "Messsage_from: ".$_POST['name']."\r\n";
+									$message= "\n<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\"></head><body>Nom: ".$_POST['name']."<br><br>\r\n\r\n";
+									$message.= "name: ".$_POST['name']."<br><br>\r\n\r\n";
+									$email=filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+									if(isset($email) && $email && isset($_POST['prename'])){
+										$headers.= "Repondez_&agrave;: $email";
+										$message.= "Email: ".$_POST['email']."<br><br>\r\n\r\n";
+										$message.= "Phone: ".$_POST['phone']."<br><br>\r\n\r\n";
+										$message.= "subject: ".$_POST['subject']."<br><br>\r\n\r\n";
+										$message.= "Message: ".$_POST['message']."<br><br></body></html>";
+										$sent = mail($to,$subject,$message,$headers,'-f'.$to);
+									}else{
+										echo "<script> alert(\"The email address is incorrect. Please correct the address before sending the message."); </script>";
+									}
+									if(isset($sent) && $sent && isset($_POST['prename'])){
+										echo "<script>alert(\"Your message is being sent. Thank you for your cooperation.");</script>";
+									}else{
+										echo "<script>alert(\"Error: Message not sent. Please try again.\");</script>";
+									}
+								?>
 			</div>
 		</section>
 
- 
+
 
 		<!-- Start Contact Info Area -->
 		<section class="contact-info-area pb-100">
@@ -372,8 +397,8 @@ Coded by www.blumdesk.com
 			</div>
 		</section>
 		<!-- End Contact Info Area -->
-<!-- Start Footer Top Area -->
-<footer class="footer-top-area pt-100">
+	<!-- Start Footer Top Area -->
+	<footer class="footer-top-area pt-100">
 	<div class="container">
 		<div class="row footer-wrapper">
 			<div class="col-lg-4 col-sm-6 col-md-6">
@@ -450,39 +475,39 @@ Coded by www.blumdesk.com
 			</div>
 		</div>
 	</div>
-</footer>
-<!-- End Footer Top Area -->
+	</footer>
+	<!-- End Footer Top Area -->
 
-<!-- Start Go Top Area -->
-<div class="go-top">
+	<!-- Start Go Top Area -->
+	<div class="go-top">
 	<i class="fa fa-angle-double-up"></i>
 	<i class="fa fa-angle-double-up"></i>
-</div>
-<!-- End Go Top Area -->
+	</div>
+	<!-- End Go Top Area -->
 
 
-<!-- Jquery Min JS -->
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
-<!-- Bootstrap Bundle Min JS -->
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<!-- Meanmenu Min JS -->
-<script src="assets/js/meanmenu.min.js"></script>
-<!-- Nice Select Min JS -->
-<script src="assets/js/nice-select.min.js"></script>
-<!-- Wow Min JS -->
-<script src="assets/js/wow.min.js"></script>
-<!-- Owl Carousel Min JS -->
-<script src="assets/js/owl.carousel.min.js"></script>
-<!-- Magnific-Popup Min JS -->
-<script src="assets/js/magnific-popup.min.js"></script>
-<!-- Form Validator Min JS -->
-<script src="assets/js/form-validator.min.js"></script>
-<!-- Contact JS -->
-<script src="assets/js/contact-form-script.js"></script>
-<!-- Ajaxchimp Min JS -->
-<script src="assets/js/ajaxchimp.min.js"></script>
-<!-- Custom JS -->
-<script src="assets/js/custom.js"></script>
-</body>
+	<!-- Jquery Min JS -->
+	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
+	<!-- Bootstrap Bundle Min JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<!-- Meanmenu Min JS -->
+	<script src="assets/js/meanmenu.min.js"></script>
+	<!-- Nice Select Min JS -->
+	<script src="assets/js/nice-select.min.js"></script>
+	<!-- Wow Min JS -->
+	<script src="assets/js/wow.min.js"></script>
+	<!-- Owl Carousel Min JS -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- Magnific-Popup Min JS -->
+	<script src="assets/js/magnific-popup.min.js"></script>
+	<!-- Form Validator Min JS -->
+	<script src="assets/js/form-validator.min.js"></script>
+	<!-- Contact JS -->
+	<script src="assets/js/contact-form-script.js"></script>
+	<!-- Ajaxchimp Min JS -->
+	<script src="assets/js/ajaxchimp.min.js"></script>
+	<!-- Custom JS -->
+	<script src="assets/js/custom.js"></script>
+	</body>
 
-</html>
+	</html>
