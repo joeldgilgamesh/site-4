@@ -344,10 +344,15 @@
 })(jQuery);
 
 //mise ajout automatique de la date sur le footer
+// debut du code d'actualisation de footeur
 function get_year() {
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
     return currentYear;
 }
 
+// l'element avec la clase année est un span vide dans le quelle on 
+// injecte l'année gace a la methode html() de jquery
+
 $(".année").html(get_year)
+// fin du code d'actualisation de fouteur
